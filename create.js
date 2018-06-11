@@ -150,4 +150,3 @@ function writeConfigFile(cb) {
 }
 
 async.series([createTopic, createQueue, getQueueAttr, snsSubscribe, setQueueAttr, writeConfigFile]);
-

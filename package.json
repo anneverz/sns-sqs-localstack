@@ -1,7 +1,7 @@
 {
   "author": "Mark C Allen <mark@markcallen.com>",
   "name": "snssqs",
-  "description": "sample sns sql system using nodejs and aws-sdk",
+  "description": "Sample sns sqs system using docker and localstack",
   "version": "0.1.0",
   "homepage": "http://www.markcallen.com/",
   "main": "app",
@@ -12,6 +12,11 @@
     "async": "0.9.x",
     "aws-sdk": "2.1.x",
     "util": "0.10.x"
+  },
+  "scripts": {
+    "create": "AWS_ACCESS_KEY_ID=foobar AWS_SECRET_ACCESS_KEY=foobar node create.js",
+    "publish": "AWS_ACCESS_KEY_ID=foobar AWS_SECRET_ACCESS_KEY=foobar node publish.js",
+    "consume": "AWS_ACCESS_KEY_ID=foobar AWS_SECRET_ACCESS_KEY=foobar node consume.js"
   },
   "devDependencies": {},
   "optionalDependencies": {}

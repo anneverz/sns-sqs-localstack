@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    localstack:
+        image: localstack/localstack:latest
+        ports:
+            - "4567-4578:4567-4578"
+            - "8080:8080"
+        networks:
+            - code-network
+
+networks:
+    code-network:
+        driver: bridge

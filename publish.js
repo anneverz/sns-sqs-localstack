@@ -17,10 +17,10 @@ function publish(mesg) {
 
   sns.publish(publishParams, function(err, data) {
     process.stdout.write(".");
-    //console.log(data);
+    console.log(data);
   });
 }
 
-for (var i=0; i < 500; i++) {
+for (var i=0; i < 10; i++) {
   publish("message: " + i);
 }

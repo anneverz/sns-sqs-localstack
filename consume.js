@@ -19,13 +19,13 @@ function getMessages() {
 }
 
 function receiveMessageCallback(err, data) {
-  //console.log(data);
+  // console.log(data);
 
   if (data && data.Messages && data.Messages.length > 0) {
 
     for (var i=0; i < data.Messages.length; i++) {
       process.stdout.write(".");
-      //console.log("do something with the message here...");
+      console.log("do something with the message here...");
       //
       // Delete the message when we've successfully processed it
       var deleteMessageParams = {
@@ -40,15 +40,15 @@ function receiveMessageCallback(err, data) {
 
   } else {
     process.stdout.write("-");
-    setTimeout(getMessages, 100);
+    setTimeout(getMessages, 1000);
   }
 }
 
 function deleteMessageCallback(err, data) {
-  //console.log("deleted message");
+  console.log("deleted message");
   //console.log(data);
 }
 
-setTimeout(getMessages, 100);
+setTimeout(getMessages, 5000);
 
 
